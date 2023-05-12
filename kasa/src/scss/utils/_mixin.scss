@@ -1,0 +1,30 @@
+@mixin newFont ($nameFont) {
+    @font-face {
+        font-family: $nameFont;
+        src: url("./assets/police/#{$nameFont}-Regular.otf");
+    }
+}
+
+@mixin font($sizeFont,$colorFont:map-get($color,primary)){
+    font-size: $sizeFont;
+    color: $colorFont;
+}
+
+@mixin bannerImg{
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@mixin tabletteOnly{
+    @media screen and (min-width:map-get($minWidth,tablette)){
+        @content;
+    }
+}
+
+@mixin desktopOnly{
+    @media screen and (min-width:map-get($minWidth,desktop)){
+        @content;
+    }
+}

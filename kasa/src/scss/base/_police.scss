@@ -1,0 +1,34 @@
+/*@import "../Utils/variables";
+@import "../Utils/mixin";*/
+
+@include newFont($font);
+
+body{
+    font-family: $font;
+    color:map-get($color,primary);
+    font-weight: normal;
+}
+
+h1{
+    @include font(map-get($fontSize,h1));
+}
+
+h2{
+    @include font(map-get($fontSize,h2));
+}
+
+p,strong{
+    @include font(map-get($fontSize,p));
+}
+
+a{
+    text-decoration: none;
+    @include font(map-get($fontSize,nav));
+    &.active{
+        text-decoration: underline;
+    }
+}
+
+li{
+    list-style: none;
+}

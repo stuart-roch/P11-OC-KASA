@@ -1,0 +1,22 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 6rem;
+    img{
+        height:3rem;
+        width:9rem;
+    }
+
+    nav{
+        width:25%;
+    }
+
+    ul{
+        display:flex;
+        justify-content: space-between;
+    
+    }
+}
+
+

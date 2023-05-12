@@ -1,0 +1,9 @@
+.home_container{
+    margin:2rem 6rem;
+}
+
+.banner_container{
+    img{
+        @include bannerImg;
+    }
+}

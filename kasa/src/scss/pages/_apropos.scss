@@ -1,0 +1,6 @@
+.apropos_container{
+    margin:2rem 6rem;
+    img{
+        @include bannerImg;
+    }
+}

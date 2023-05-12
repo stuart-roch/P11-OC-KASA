@@ -1,13 +1,156 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1920px;
+    margin: 2rem auto 0 auto;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  padding-left: 0;
 }
+
+.hidden {
+  display: none;
+}
+
+/*@import "../Utils/variables";
+@import "../Utils/mixin";*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/police/Montserrat-Regular.otf");
+}
+body {
+  font-family: "Montserrat";
+  color: #FF6060;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #FF6060;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #FF6060;
+}
+
+p, strong {
+  font-size: 1rem;
+  color: #FF6060;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #FF6060;
+}
+a.active {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6rem;
+}
+header img {
+  height: 3rem;
+  width: 9rem;
+}
+header nav {
+  width: 25%;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+footer p {
+  color: white;
+}
+footer img {
+  height: 2rem;
+  width: 6rem;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.collapse_container {
+  margin: 2rem 6rem;
+  font-size: 1.5rem;
+  background-color: #F7F7F7;
+  border-radius: 0 0 5px 5px;
+}
+.collapse_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  height: 2rem;
+  border-radius: 5px;
+}
+.collapse_top .fa-chevron-down, .collapse_top .fa-chevron-up {
+  color: white;
+  margin-right: 1rem;
+}
+.collapse_title {
+  color: white;
+  margin-left: 1rem;
+}
+.collapse_bottom {
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+}
+
+.card-logement {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  background-color: #FF6060;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+}
+.card-logement h2 {
+  color: white;
+  align-self: flex-end;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.apropos_container {
+  margin: 2rem 6rem;
+}
+.apropos_container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.home_container {
+  margin: 2rem 6rem;
+}
+
+.banner_container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */
