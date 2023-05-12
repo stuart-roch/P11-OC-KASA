@@ -16,9 +16,9 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/apropos' element={<APropos />} />
-        <Route path='/logement/:id' element={<Logement />} />
+        <Route path='/P11-OC-KASA/kasa/public/home' element={<Home />} />
+        <Route path='/P11-OC-KASA/kasa/public/apropos' element={<APropos />} />
+        <Route path='/P11-OC-KASA/kasa/public/logement/:id' element={<Logement />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />
