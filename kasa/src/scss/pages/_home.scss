@@ -3,7 +3,29 @@
 }
 
 .banner_container{
+    position: relative;
+    text-align: center;
     img{
         @include bannerImg;
+    }
+    h1{
+        color:white;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+}
+
+.logements_section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top:2rem;
+    padding:2rem;
+    background-color: map-get($colorGrey,light);
+    border-radius: 10px;
+    a{
+        flex:0 0 30%;
+        margin:1rem 0;
     }
 }

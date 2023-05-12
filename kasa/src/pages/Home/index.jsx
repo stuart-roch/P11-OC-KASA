@@ -13,7 +13,7 @@ function Home() {
 
     async function fetchLogements(){
       try{
-        const response = await fetch("./data/logements.json")
+        const response = await fetch("../../../data/logements.json")
         const data  = await response.json()
         setLogements(data)
       }catch(err){
@@ -28,16 +28,12 @@ function Home() {
   return (
     <div className="home_container">
       <div className="banner_container">
-        <div className="banner-img_container">
-          <img src={bannerImg} alt="Bannière de la page A propos" />
-        </div>
-        <div className="title_container">
-          <h1>Chez vous, partout et ailleurs</h1>
-        </div>
+        <img src={bannerImg} alt="Bannière de la page A propos" />
+        <h1>Chez vous, partout et ailleurs</h1>
       </div>
       <div className="logements_section">
       {logements.map( logement => 
-        <Link key={logement.id} to={"/logement/"+logement.id}><Card title={logement.title}/></Link> )}
+        <Link key={logement.id} to={"/P11-OC-KASA/kasa/public/logement/"+logement.id}><Card title={logement.title}/></Link> )}
       </div>
     </div>
     )
