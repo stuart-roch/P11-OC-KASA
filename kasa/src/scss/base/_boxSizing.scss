@@ -1,8 +1,8 @@
 body{
-    margin:0;
-    @include desktopOnly{
-        max-width: map-get($maxWidth,desktop);
-        margin:2rem auto 0 auto ;
+    max-width: map-get($maxWidth,desktop);
+    margin:2rem auto 0 auto;
+    @include mobileOnly{
+        margin:2rem 0 0;
     }
 }
 

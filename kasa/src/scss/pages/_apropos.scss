@@ -1,6 +1,15 @@
 .apropos_container{
     margin:2rem 6rem;
+    @include mobileOnly{
+        margin:2rem 1.5rem 0;
+    }
     img{
         @include bannerImg;
+    }
+    > div{
+        margin:2rem 6rem;
+        @include mobileOnly{
+            margin:2rem 0;
+        }
     }
 }

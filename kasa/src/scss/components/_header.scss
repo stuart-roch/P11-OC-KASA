@@ -3,19 +3,35 @@ header{
     justify-content: space-between;
     align-items: center;
     margin:0 6rem;
+    @include mobileOnly{
+        margin:0 1.5rem;
+    }
     img{
         height:3rem;
         width:9rem;
+        @include mobileOnly{
+            height:4rem;
+            width:40%;
+        }
     }
 
     nav{
         width:25%;
+        @include mobileOnly{
+            text-transform:uppercase;
+            width: 50%;
+        }
     }
 
     ul{
         display:flex;
         justify-content: space-between;
-    
+    }
+
+    a{
+        @include mobileOnly{
+            font-size:0.75rem;
+        }
     }
 }
 

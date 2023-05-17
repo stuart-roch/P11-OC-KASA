@@ -1,0 +1,29 @@
+.carrousel_container{
+    display: flex;
+    position: relative;
+    img{
+        width:100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 20px;
+        @include mobileOnly{
+            height: 300px;
+        }
+    }
+    .fa-solid{
+        position: absolute;
+        font-size:6rem;
+        color: white;
+        top:40%;
+        @include mobileOnly{
+            font-size:3rem;
+        }
+    }
+    .fa-chevron-right{
+        right: 1rem;
+    }
+
+    .fa-chevron-left{
+        left: 1rem;
+    }
+}

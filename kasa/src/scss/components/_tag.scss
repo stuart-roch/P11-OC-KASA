@@ -1,0 +1,15 @@
+.logement_tag{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($map: $color, $key: primary);
+    border-radius: 10px;
+    height: 2rem;
+    width: max-content;
+    padding:0 1rem;
+    color:white;
+    margin-right: 1.5rem;
+    @include mobileOnly{
+        font-size:0.62rem;
+    }
+}

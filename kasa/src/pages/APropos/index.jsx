@@ -14,8 +14,10 @@ function APropos() {
 	return (
 		<div className="apropos_container">
 			<img src={bannerImg} alt="Bannière de la page A propos" />
-            {pageContents.map( pageContent => 
-			<Collapse key={pageContent.title} title={pageContent.title} txt={pageContent.txt} />)}
+			<div>
+				{pageContents.map( pageContent => 
+				<Collapse key={pageContent.title} title={pageContent.title} txt={pageContent.txt} />)}
+			</div>
 		</div>
 	)
 }

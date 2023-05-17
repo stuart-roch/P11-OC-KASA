@@ -1,7 +1,7 @@
 import logo from "../../assets/images/LOGO.png"
 import { Link, useLocation } from "react-router-dom"
 
-const routes = [{pageName : "Accueil", link : "/P11-OC-KASA/kasa/public/home" },{pageName : "A Propos", link : "/P11-OC-KASA/kasa/public/apropos" }]
+const routes = [{pageName : "Accueil", link : "/home" },{pageName : "A Propos", link : "/apropos" }]
 
 function Header(){
 

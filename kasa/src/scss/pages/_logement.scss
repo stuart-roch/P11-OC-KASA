@@ -1,0 +1,95 @@
+.logement_container{
+    margin:2rem 6rem;
+    @include mobileOnly{
+        margin:2rem 1.5rem;
+    }
+}
+
+.logement_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logement_header-text{
+    width: 70%;
+    @include mobileOnly{
+        width: 100%;
+    }
+    h1{
+        font-size: 2.4rem;
+        margin-top:1rem;
+        margin-bottom: 0.5rem;
+        @include mobileOnly{
+            font-size: 1.5rem;
+        }
+    }
+    strong{
+        font-size: 1.2rem;
+        font-weight: normal;
+        @include mobileOnly{
+            font-size:0.8rem;
+        }
+    }
+    
+}
+.logement_host-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18%;
+    @include mobileOnly{
+        order:3;
+    }
+    img{
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        object-fit: cover;
+        @include mobileOnly{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    strong{
+        @include mobileOnly{
+            font-size:0.75rem;
+        }
+    }
+}
+
+.logement_tags{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width:50%;
+    margin-top:1.5rem;
+    @include mobileOnly{
+        order:1;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+.logement_ratings{
+    width: 50%;
+    @include mobileOnly{
+        order:2;
+    }
+}
+.logement_description-equip-container{
+    display: flex;
+    justify-content: space-between;
+    @include mobileOnly{
+        flex-wrap: wrap;
+    }
+}
+
+.logement_description, .logement_equipements{
+    width: 45%;
+    @include mobileOnly{
+        width: 100%;
+    }
+}
+

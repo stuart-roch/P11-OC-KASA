@@ -1,11 +1,21 @@
 .error404_container{
     text-align: center;
+    @include mobileOnly{
+        margin: 0 1.5rem;
+    }
     h1{
         font-size: 288px;
         margin:0;
+        @include mobileOnly{
+            font-size:96px;
+            margin:5rem 0;
+        }
     }
     p{
         font-size: 36px;
+        @include mobileOnly{
+            font-size:18px;
+        }
     }
     a{
         display: block;
@@ -13,5 +23,8 @@
         font-size: 18px;
         margin-top:5rem;
         margin-bottom: 3rem;
+        @include mobileOnly{
+            font-size:14px;
+        }
     }
 }

@@ -18,13 +18,19 @@
 }
 
 @mixin tabletteOnly{
-    @media screen and (min-width:map-get($minWidth,tablette)){
+    @media screen and (max-width:map-get($maxWidth,tablette)){
         @content;
     }
 }
 
 @mixin desktopOnly{
     @media screen and (min-width:map-get($minWidth,desktop)){
+        @content;
+    }
+}
+
+@mixin mobileOnly{
+    @media screen and (max-width:767.999px){
         @content;
     }
 }
