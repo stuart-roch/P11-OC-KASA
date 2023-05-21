@@ -8,7 +8,7 @@
     }
     > div{
         margin:2rem 6rem;
-        @include mobileOnly{
+        @include tabletteOnly{
             margin:2rem 0;
         }
     }

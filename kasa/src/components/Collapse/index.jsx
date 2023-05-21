@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Collapse({ title, txt }){
+function Collapse({ title, content }){
 
     const [isOpen, setIsOpen] = useState(true);
     
@@ -11,7 +11,8 @@ function Collapse({ title, txt }){
                 <i className={isOpen ? "fa-solid fa-chevron-up" : "fa-solid fa-chevron-down"} onClick={() => setIsOpen(!isOpen)}></i>
             </div>
             <div className={isOpen ? "collapse_bottom" : "collapse_bottom hidden"}>
-                <p className="collapse_txt"> {txt} </p>
+                {content.length > 1 ? content.map(text => <p key={text} className="collapse_txt">{text}</p> )
+                : (<p className="collapse_txt"> {content[0]} </p>)}
             </div>
         </div>
     )

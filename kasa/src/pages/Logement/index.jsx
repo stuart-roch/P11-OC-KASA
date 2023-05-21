@@ -1,31 +1,44 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import Carrousel from "../../components/Carrousel";
 import Tag from "../../components/Tag";
+import Ratings from "../../components/Ratings";
 
 
 function Logement() {
 
   const { logementId } = useParams()
+  const navigate = useNavigate()
   const [logement,setLogement] = useState({})
   const [isDataLoaded,setIsDataLoaded] = useState(false)
 
   useEffect( () => {
-    
+        
     async function fetchLogement(){
       try{
         const response = await fetch("../data/logements.json")
         const datas  = await response.json()
-        setLogement(datas.filter( data => data.id === logementId )[0])
-        setIsDataLoaded(true)
+        const data = datas.filter( data => data.id === logementId )
+        if(data.length === 1){
+          setLogement(data[0])
+          setIsDataLoaded(true)
+        }else{
+          navigate("/404")
+        }
       }catch(err){
         console.log(err)
       }
     }
 
     fetchLogement()
-    document.title = logement.title + " - Kasa"
+  //eslint-disable-next-line  
+  },[])
+
+  useEffect(() => {
+    if(isDataLoaded){
+      document.title = logement.title + " - Kasa"
+    }
   })
 
   return isDataLoaded && (
@@ -48,15 +61,15 @@ function Logement() {
           )}
         </div>
         <div className="logement_rating">
-          
+            <Ratings ratings={logement.rating}/>
         </div>
       </div>
       <div className="logement_description-equip-container">
         <div className="logement_description">
-          <Collapse title="Description" txt={logement.description} />
+          <Collapse title="Description" content={[logement.description]} />
         </div>
         <div className="logement_equipements">
-          <Collapse title="Equipements" txt={logement.equipments.reduce((acc,res)=> acc + " " + res)} />
+          <Collapse title="Equipements" content={logement.equipments}/>
         </div>
       </div>
     </div>

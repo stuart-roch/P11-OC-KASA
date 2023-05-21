@@ -14,8 +14,9 @@
 
 .logement_header-text{
     width: 70%;
-    @include mobileOnly{
+    @include tabletteOnly{
         width: 100%;
+        order:0;
     }
     h1{
         font-size: 2.4rem;
@@ -36,10 +37,9 @@
 }
 .logement_host-description{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 18%;
-    @include mobileOnly{
+    @include tabletteOnly{
         order:3;
     }
     img{
@@ -53,6 +53,8 @@
         }
     }
     strong{
+        width: 35%;
+        margin-right: 0.5rem;
         @include mobileOnly{
             font-size:0.75rem;
         }
@@ -65,16 +67,15 @@
     flex-wrap: wrap;
     width:50%;
     margin-top:1.5rem;
-    @include mobileOnly{
+    @include tabletteOnly{
         order:1;
         width: 100%;
         margin-top: 1rem;
     }
 }
 
-.logement_ratings{
-    width: 50%;
-    @include mobileOnly{
+.logement_rating{
+    @include tabletteOnly{
         order:2;
     }
 }

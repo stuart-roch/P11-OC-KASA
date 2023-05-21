@@ -16,10 +16,12 @@ header{
     }
 
     nav{
-        width:25%;
+        width:40%;
+        @include tabletteOnly{
+            width: 55%;
+        }
         @include mobileOnly{
             text-transform:uppercase;
-            width: 50%;
         }
     }
 
@@ -27,7 +29,10 @@ header{
         display:flex;
         justify-content: space-between;
     }
-
+    li{
+        width: 50%;
+        text-align: end;
+    }
     a{
         @include mobileOnly{
             font-size:0.75rem;
