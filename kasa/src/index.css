@@ -160,9 +160,7 @@ footer img {
   display: flex;
   height: 400px;
   width: 100%;
-  background-color: #FF6060;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  border-radius: 10px;
+  position: relative;
 }
 @media screen and (max-width: 1023.9999px) {
   .card-logement {
@@ -175,9 +173,15 @@ footer img {
   }
 }
 .card-logement h2 {
+  position: absolute;
   color: white;
   align-self: flex-end;
   margin: 0 1rem 1.5rem 1rem;
+}
+.card-logement img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .carrousel_container {
@@ -211,6 +215,12 @@ footer img {
 }
 .carrousel_container .fa-chevron-left {
   left: 1rem;
+}
+.carrousel_container .counter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: white;
 }
 
 .logement_tag {

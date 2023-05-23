@@ -17,12 +17,19 @@ function Carrousel({ imgUrl, imgs}){
             setCurrentImg({url:imgs[currentImg.index+1],index:currentImg.index+1}):
             setCurrentImg({url:imgs[0],index:0})
     }
-    return (
+    return imgs.length > 1 ? (
         <div className="carrousel_container">
             <i className="fa-solid fa-chevron-left prev-slide" onClick={prevSlide}></i>
             <img src={currentImg.url} alt="du logement" />
+            <p className="counter">{(currentImg.index + 1) + "/" + imgs.length}</p>
             <i className="fa-solid fa-chevron-right next-slide" onClick={nextSlide}></i>
         </div>
+    )
+    :
+    (
+    <div className="carrousel_container">
+        <img src={currentImg.url} alt="du logement" />
+    </div>
     )
 }
 

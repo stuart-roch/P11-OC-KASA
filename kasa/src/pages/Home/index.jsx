@@ -33,7 +33,7 @@ function Home() {
       </div>
       <div className="logements_section">
       {logements.map( logement => 
-        <Link key={logement.id} to={"/logement/"+logement.id}><Card title={logement.title}/></Link> )}
+        <Link key={logement.id} to={"/logement/"+logement.id}><Card title={logement.title} imgUrl={logement.cover}/></Link> )}
       </div>
     </div>
     )
